@@ -66,7 +66,7 @@ class AnonymIPPlugin extends GenericPlugin {
 		$params =& $args[1];
 		$ipPattern = '/([0-9]+\\.[0-9]+\\.[0-9]+)\\.[0-9]+/';
 		foreach ($params as $index => $param) {
-			if (preg_match($ipPattern, $param)) {
+			if (preg_match($ipPattern, $param) && !preg_match('/[a-zA-Z]/',$param)) {
 				$anonymizedIP = preg_replace($ipPattern, '\\1.0', $param);
 				$params[$index] = $anonymizedIP;
 			}
