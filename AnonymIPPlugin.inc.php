@@ -55,7 +55,7 @@ class AnonymIPPlugin extends GenericPlugin {
 	 */
 	function anonymize($hookName, $args) {
 		$params =& $args[1];
-		$ipPattern = '/([0-9]+\\.[0-9]+\\.[0-9]+)\\.[0-9]+/';
+		$ipPattern = '/^([0-9]+\\.[0-9]+\\.[0-9]+)\\.[0-9]+$/';
 		foreach ($params as $index => $param) {
 			if (preg_match($ipPattern, $param)) {
 				$anonymizedIP = preg_replace($ipPattern, '\\1.0', $param);
