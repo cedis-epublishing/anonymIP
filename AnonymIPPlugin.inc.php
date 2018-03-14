@@ -47,6 +47,10 @@ class AnonymIPPlugin extends GenericPlugin {
 		if ($success && $this->getEnabled()) {
 			HookRegistry::register('eventlogdao::_insertobject', array($this, 'anonymize'));
 			HookRegistry::register('emaillogdao::_insertobject', array($this, 'anonymize'));
+			if (!Config::getVar('security', 'session_check_ip')) {
+				HookRegistry::register('sessiondao::_insertsession', array($this, 'anonymize'));
+				HookRegistry::register('sessiondao::_updateobject', array($this, 'anonymize'));
+			}
 		}
 		return $success;
 	}
