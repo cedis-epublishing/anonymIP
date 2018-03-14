@@ -1,14 +1,17 @@
 ================================
 === OJS Anonymized IP Plugin
-=== Version: 1.0
-=== Author: Božana Bokan <bozana.bokan@cedis.fu-berlin.de>
+=== Version: 1.2
+=== Author: Božana Bokan, Carola Fanselow
     Center for Digital Systems (CeDiS), Freie Universität Berlin
-=== Last update: October 02, 2015
+=== Last update: March 14th, 2018
 ================================
 
 About
 -----
-This plugin anonymizes the IP addresses i.e. sets their last octet to zero before they are saved in the database.
+This plugin anonymizes IP addresses in the OJS database i.e. sets their last octet to zero before they are saved in the database.
+If session_check_ip=Off, IP addresses in the sessions table will be anonymized as well. If session_check_ip=On, 
+IP addresses in the sessions table will not be anonymized. In this case, it is recommanded to chose another means
+of anonymizing or deleting these IP adresseses as soon as they are not needed anymore. 
 
 License
 -------
@@ -16,11 +19,7 @@ This plugin is licensed under the GNU General Public License v2. See the file LI
 
 System Requirements
 -------------------
-Same requirements as the OJS 2.4.7 core.
-
-NOTE:
-The variable 'session_check_ip' should be sett to 'Off' in the file config.inc.php:
-session_check_ip = Off
+Same requirements as the OJS 3.1.0 core.
 
 Installation
 ------------
