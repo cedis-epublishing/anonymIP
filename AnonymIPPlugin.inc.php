@@ -5,6 +5,7 @@
  *
  * Copyright (c) 2013-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
+ * Copyright (c) 2018 Freie Universität Berlin 
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.anonymIP
@@ -46,12 +47,6 @@ class AnonymIPPlugin extends GenericPlugin {
 		if ($success && $this->getEnabled()) {
 			HookRegistry::register('eventlogdao::_insertobject', array($this, 'anonymize'));
 			HookRegistry::register('emaillogdao::_insertobject', array($this, 'anonymize'));
-			HookRegistry::register('commentdao::_insertcomment', array($this, 'anonymize'));
-			HookRegistry::register('commentdao::_updatecomment', array($this, 'anonymize'));
-			if (!Config::getVar('security', 'session_check_ip')) {
-				HookRegistry::register('sessiondao::_insertsession', array($this, 'anonymize'));
-				HookRegistry::register('sessiondao::_updateobject', array($this, 'anonymize'));
-			}
 		}
 		return $success;
 	}
