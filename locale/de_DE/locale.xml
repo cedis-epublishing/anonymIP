@@ -14,5 +14,5 @@
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.anonymIP.name">Anonymized-IP-Plug-In</message>
-	<message key="plugins.generic.anonymIP.description"><![CDATA[Dieses Plug-In anonymisiert die IP-Adressen, indem der letzte Teil der Adresse auf Null gesetzt wird, bevor die Adresse in der Datenbank gespeichert wird. <strong>HINWEIS:</strong> Die Variable <strong>session_check_ip</strong> sollte in der Datei <strong>config.inc.php</strong> auf <strong>Off</strong> gesetzt werden.]]></message>
+	<message key="plugins.generic.anonymIP.description">Dieses Plug-In anonymisiert die IP-Adressen, indem der letzte Teil der Adresse auf Null gesetzt wird, bevor die Adresse in der Datenbank gespeichert wird.</message>
 </locale>
