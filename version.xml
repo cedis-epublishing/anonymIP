@@ -4,17 +4,15 @@
 <!--
   * version.xml
   *
-  * Copyright (c) 2013-2015 Simon Fraser University Library
-  * Copyright (c) 2003-2015 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Plugin version information.
   -->
 <version>
 	<application>anonymIP</application>
 	<type>plugins.generic</type>
-	<release>1.0.0.0</release>
-	<date>2015-10-02</date>
+	<release>1.2.0.0</release>
+	<date>2018-04-03</date>
 	<lazy-load>1</lazy-load>
 	<sitewide>1</sitewide>
 	<class>AnonymIPPlugin</class>

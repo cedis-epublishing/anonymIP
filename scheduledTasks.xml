@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * plugins/generic/anonymIP/scheduledTasks.xml
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  -->
+
+<!DOCTYPE scheduled_tasks SYSTEM "../../../lib/pkp/dtd/scheduledTasks.dtd">
+
+<scheduled_tasks>
+	<task class="plugins.generic.anonymIP.AnonymIPGarbageCollector">
+		<descr>Run session garbage collector.</descr>
+		<frequency minute="0"/>
+	</task>
+</scheduled_tasks>

@@ -3,10 +3,7 @@
 /**
  * @file AnonymIPPlugin.inc.php
  *
- * Copyright (c) 2013-2015 Simon Fraser University Library
- * Copyright (c) 2003-2015 John Willinsky
- * Copyright (c) 2018 Freie Universität Berlin 
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.anonymIP
  * @class AnonymIPPlugin
