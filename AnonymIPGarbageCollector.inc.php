@@ -18,7 +18,7 @@ class AnonymIPGarbageCollector extends ScheduledTask {
 	 * Constructor.
 	 * @param $argv array task arguments
 	 */
-	function __construct($args)  {		
+	function __construct($args)  {
 		parent::__construct($args);
 	}
 
@@ -32,9 +32,10 @@ class AnonymIPGarbageCollector extends ScheduledTask {
 	/**
 	 * @see ScheduledTask::executeActions()
 	 */
-	function executeActions() {	
+	function executeActions() {
 		$sessionManager =& SessionManager::getManager();
-		$sessionManager->gc(86400);
+		$sessionManager->gc(86400); // Parameter is not used currently, may be used later
+		$sessionManager->destroy($sessionManager->getUserSession()->getId());
 		return true;
 	}
 
