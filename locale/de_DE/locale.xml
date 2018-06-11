@@ -15,4 +15,5 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.anonymIP.name">Anonymized-IP-Plug-In</message>
 	<message key="plugins.generic.anonymIP.description">Dieses Plug-In anonymisiert die IP-Adressen, indem der letzte Teil der Adresse auf Null gesetzt wird, bevor die Adresse in der Datenbank gespeichert wird.</message>
+	<message key="plugins.generic.anonymip.gcTask.name">AnonymIPAutomaticTask</message>
 </locale>
