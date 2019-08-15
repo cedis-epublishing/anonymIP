@@ -39,8 +39,8 @@ class AnonymIPPlugin extends GenericPlugin {
 	/**
 	 * @copydoc LazyLoadPlugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = NULL) {
+		$success = parent::register($category, $path, $mainContextId);
 		if ($success && $this->getEnabled()) {
 			HookRegistry::register('eventlogdao::_insertobject', array($this, 'anonymize'));
 			HookRegistry::register('emaillogdao::_insertobject', array($this, 'anonymize'));
